@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <!-- jquery cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="name-label">name</div>
+    <div class="age-label">age</div>
+    <input type="text" id="" />
+    <script>
+      $(document).ready(function () {
+        // variable declaretion
+        $name = "methew";
+        $age = 30;
+        $number = 1;
+        $message = "i am learing jquery";
+        // function invocation
+        // test();
+        // test2();
+        // showText($message);
+        // function declaretion
+        function test() {
+          alert("test");
+        }
+        function test2() {
+          alert("my name is : " + $name + " my age is : " + $age);
+        }
+
+        function showText($message) {
+          alert($message);
+        }
+
+        // condition
+        if ($age >= 18) {
+          // alert("adult");
+        } else {
+          // alert("child");
+        }
+
+        if ($number === 1) {
+          // alert(true);
+        } else {
+          // alert(false);
+        }
+
+        // selectors
+        // $("#name-label").hide();
+        $(".age-label").hide();
+        // $("input").hide();
+
+        // $("body").css("background-color", "red");
+        $("input").css("background-color", "green");
+      });
+    </script>
+  </body>
+</html>
