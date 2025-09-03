@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>jquery 2</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -12,10 +12,36 @@
     ></script>
   </head>
   <body>
-    <div id="change-color">click me</div>
+    <div id="change-color">click me to change-color</div>
+    <input type="text" id="" />
+    <br />
+    <br />
+    <br />
+    <h1 id="change-body">click me to change-body</h1>
+    <div>
+      <ul>
+        <li id="n1"><span>number1</span></li>
+        <li id="n2"><span>number2</span></li>
+        <li id="n3"><span>number3</span></li>
+        <li id="n4"><span>number4</span></li>
+        <li id="n5"><span>number5</span></li>
+      </ul>
+    </div>
     <script>
       $(document).ready(function () {
-
+        // event handle system 1
+        $("#change-color").click(function () {
+          $("input").css("background-color", "green");
+        });
+        // event handle system 2
+        $("body").on("click", "#change-body", function () {
+          // alert("event bubbled");
+          // $("body").css("background-color", "red");
+          // alert($("#n1").children().html());
+          // alert($("#n2").children().html());
+          // alert($("#n3").parent().html());
+          alert($("#n4").siblings.html());
+        });
       });
     </script>
   </body>
